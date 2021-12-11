@@ -1,5 +1,13 @@
 .home-map {
-  &__inside {
-
+  &__map-content {
+    .leaflet-container {
+      height: 100vh;
+      z-index: 0;
+    }
+  }
+  &__actions {
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 }

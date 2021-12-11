@@ -78,8 +78,10 @@ class AddOffer extends React.Component {
           </ul>
 
           <section class="confirm-form">
-            <button type="submit">Opublikuj!</button>
-            <button>Anuluj</button>
+            <button class="ok-btn" type="submit">
+              Opublikuj!
+            </button>
+            <button class="cancel-btn">Anuluj</button>
           </section>
         </form>
       </div>

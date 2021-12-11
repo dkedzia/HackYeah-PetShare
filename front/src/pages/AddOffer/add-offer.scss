@@ -6,6 +6,7 @@
   h2 {
     text-align: center;
   }
+
   form {
     width: 30rem;
     padding: 4rem;
@@ -18,10 +19,12 @@
       margin: 0;
       padding: 0;
     }
+
     label {
       margin-bottom: 0.35rem;
       padding-left: 0.5rem;
     }
+
     input,
     textarea,
     select {
@@ -33,6 +36,44 @@
       background-color: $color-main-light;
       border-radius: 0.25rem;
       color: $color-white;
+    }
+
+    textarea {
+      resize: none;
+      height: 5rem;
+    }
+
+    .confirm-form {
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        margin: 0.2rem;
+        font: inherit;
+        color: $color-main;
+        padding: 0.5rem 1.5rem;
+        border-radius: 1.5rem;
+        border: solid 2px $color-accent;
+        cursor: pointer;
+        // transition: transform 0.2s ease-out;
+      }
+
+      .ok-btn {
+        background-color: $color-accent;
+      }
+
+      .ok-btn:hover {
+        color: $color-white;
+        // transform: scale(1);
+      }
+
+      .cancel-btn {
+        background-color: $color-main-light;
+      }
+
+      .cancel-btn:hover {
+        color: $color-white;
+      }
     }
   }
 }

@@ -26,14 +26,19 @@ class Map extends React.Component
         }
     }
 
+    fetchMarkers() {
+        // fetch()
+    }
+
     render() {
+        const {markers} = this.state
         return <div className="map">
             <MapContainer center={defaultMapCoordinates} zoom={defaultMapZoom} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                {this.state.markers.map(function(marker) {
+                {markers.map(function(marker) {
                     return <MapMarker x={marker.x} y={marker.y} description={marker.description}/>
                 })}
             </MapContainer>

@@ -5,12 +5,16 @@ class AddOffer extends React.Component {
   render() {
     return (
       <div className="add-offer">
-        <h1>Dodaj ogłoszenie</h1>
+        <h2>Dodaj ogłoszenie</h2>
         <form action="" method="">
           <ul>
             <li>
-              <label>Podaj swoją lokalizację</label>
-              <input></input>
+              <label for="userlocalization">Podaj swoją lokalizację</label>
+              <input
+                type=""
+                name="user-localization"
+                id="userlocalization"
+              ></input>
             </li>
             <li>
               <label for="useremail">Podaj swój email</label>
@@ -22,10 +26,14 @@ class AddOffer extends React.Component {
               ></input>
             </li>
             <li>
+              <label for="userphone">Podaj swój numer telefonu</label>
+              <input type="tel" name="user-phone" id="userphone"></input>
+            </li>
+            <li>
               <label for="whichpet">
                 Dla jakiego zwierzaka przeznaczony jest produkt?
               </label>
-              <select name="which-pet" id="whichpet">
+              <select name="which-pet" id="whichpet" required>
                 <option value="dog">Pies</option>
                 <option value="cat">Kot</option>
                 <option value="birds">Ptaki</option>
@@ -39,7 +47,7 @@ class AddOffer extends React.Component {
             </li>
             <li>
               <label for="producscategory">Wybierz kategorię produktu</label>
-              <select name="products-category" id="producscategory">
+              <select name="products-category" id="producscategory" required>
                 <option value="food">Pokarm</option>
                 <option value="toy">Zabawka</option>
                 <option value="leash">Smycz</option>
@@ -49,7 +57,30 @@ class AddOffer extends React.Component {
                 <option value="other">Inne</option>
               </select>
             </li>
+            <li>
+              <label for="productname">Nazwa produktu</label>
+              <input
+                type="text"
+                name="product-name"
+                id="productname"
+                maxlenght="15"
+              ></input>
+            </li>
+            <li>
+              <label for="description">Opis</label>
+              <textarea
+                name="product-description"
+                id="description"
+                maxrows="10"
+                required
+              ></textarea>
+            </li>
           </ul>
+
+          <section class="confirm-form">
+            <button type="submit">Opublikuj!</button>
+            <button>Anuluj</button>
+          </section>
         </form>
       </div>
     );

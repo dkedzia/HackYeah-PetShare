@@ -1,3 +1,38 @@
-.add-offer {
+@import "../../assets/colors";
 
+.add-offer {
+  margin: 8rem;
+
+  h2 {
+    text-align: center;
+  }
+  form {
+    width: 30rem;
+    padding: 4rem;
+    border-radius: 15px;
+    box-shadow: 3px 3px 11px rgba(104, 104, 175, 0.3);
+    background-color: $color-main-medium;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    label {
+      margin-bottom: 0.35rem;
+      padding-left: 0.5rem;
+    }
+    input,
+    textarea,
+    select {
+      box-sizing: border-box;
+      width: 100%;
+      height: 2rem;
+      margin-bottom: 1rem;
+      border-style: none;
+      background-color: $color-main-light;
+      border-radius: 0.25rem;
+      color: $color-white;
+    }
+  }
 }

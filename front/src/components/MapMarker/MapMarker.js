@@ -7,7 +7,7 @@ class MapMarker extends React.Component
     render() {
         return <Marker position={[this.props.x, this.props.y]} icon={customIcon}>
             <Popup>
-                {this.props.name}
+                {this.props.description}
             </Popup>
         </Marker>
     }
